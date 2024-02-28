@@ -7,6 +7,8 @@ function dynamicallyLoadUserData() {
         .then(data => displayDaynamicData(data))
 }
 
+// Display function
+
 function displayDaynamicData(data) {
 
     // // console.log(data)
@@ -15,16 +17,17 @@ function displayDaynamicData(data) {
 
     // for (const object of data) {
 
-    //     // show all object
+    //     // show all objects data
     //     console.log(object)
 
-    //     // show object name
+    //     // show all objects data name
     //     console.log(object.email)
     //     }
 
+    // get ul with id
     const ul = document.getElementById('ul_list');
    
-
+    // use for of loop for createElement list
     for (const user of data) {
         const li = document.createElement('li');
         li.innerText = user.name;
