@@ -40,9 +40,11 @@
 // loadPostData();
 
 
-
+// Practice part
 
 function loadPostData() {
+
+    //Load post data with fetch
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
         .then(data => displayPostData(data) )
@@ -50,13 +52,18 @@ function loadPostData() {
 
 function displayPostData(posts) {
   
+    // get post_container with id
     const postDivContainer = document.getElementById('post_container');
 
     for (const post of posts) {
         console.log(post)
 
+        // create div
         const postDiv = document.createElement('div');
         postDiv.classList.add('post')
+
+        // set innerHTML for div and also dynamically set data
+        
         postDiv.innerHTML = `
             <h2>User: ${post.userId}</h2>
             <h3>Post Title: ${post.title}</h3>
